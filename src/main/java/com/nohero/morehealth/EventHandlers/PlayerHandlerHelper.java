@@ -144,13 +144,13 @@ public class PlayerHandlerHelper
     {
       EntityPlayer realPlayer = stats.player;
       NBTTagCompound entityPlayerTag;
-      NBTTagCompound entityPlayerTag;
+      NBTTagCompound entityPlayerTag1;
       if (realPlayer != null) {
-        entityPlayerTag = realPlayer.getEntityData();
+        entityPlayerTag1 = realPlayer.getEntityData();
       } else {
-        entityPlayerTag = player.getEntityData();
+        entityPlayerTag1 = player.getEntityData();
       }
-      NBTTagCompound moreHealthTag = (NBTTagCompound)entityPlayerTag.getTag("MoreHealth 1");
+      NBTTagCompound moreHealthTag = (NBTTagCompound)entityPlayerTag1.getTag("MoreHealth 1");
       
       moreHealthTag.setInteger("start", stats.start);
       if (mod_moreHealthEnhanced.RpgMode) {
